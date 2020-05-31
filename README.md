@@ -13,7 +13,7 @@ The admin can add a content, and mange the services of the application
 The Student can Enroll in a course, and go to the classroom for begin the track
 
 #### space for Teachers
-The Teacher can 
+The Teacher can answer for the student's questions .
 
 
 
@@ -23,6 +23,10 @@ The Teacher can
 We would like to extend our thanks to the following sponsors for funding Laravel development. 
 
 - **[Mobidal](https://mobidal.com/)**
+
+## Project test Live
+You can go to the project live with the folowing link.**[Mobidal-Formation](http://mobidal-formations.herokuapp.com/)**
+
 
 
 
