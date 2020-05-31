@@ -1,7 +1,7 @@
 
-## About Formations Online Courses Project 
+## About Laravel Project 
 
-Formations Online Courses is a web application with expressive. Create for give a free courses to Students and for the Teachers to Create content can develop the Student who Want to learn more. 
+Formations Online Courses is a web applicationv created by **Laravel** Framework. Create for give a free courses to Students and for the Teachers to Create content can develop the Student who Want to learn more. 
 
 ## Spaces of project
 there are three part in the project.
@@ -25,7 +25,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Mobidal](https://mobidal.com/)**
 
 ## Project test Live
-You can go to the project live with the folowing link.**[Mobidal-Formation](http://mobidal-formations.herokuapp.com/)**
+You can go to the project live on the Heroku Platform with the folowing link.**[Mobidal-Formation](http://mobidal-formations.herokuapp.com/)**
 
 
 
