@@ -50,3 +50,4 @@ Route::prefix('classroom')->name('classroom.')->group(function(){
 Route::resource('api/users','TestResourceController');
 Route::apiResource('api/tests','TestApiController'); // except the [create, edit] methods
 
+Route::get('invoke', 'MyInvokeController');// for test the invoke parameter make:controller --invokable
