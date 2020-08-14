@@ -170,7 +170,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"> {{ Auth::user()->name }}</a>
+          <a href="/profile" class="d-block"> {{ Auth::user()->name }}</a>
         </div>
         <div class="info">
           <a src={{ Auth::user()->email }} class="img-circle elevation-2" >
@@ -608,7 +608,7 @@
           
           {{-- <li class="nav-header">MISCELLANEOUS</li>--}}
           <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>Documentation</p>
             </a>
