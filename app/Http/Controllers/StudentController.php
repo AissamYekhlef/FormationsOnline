@@ -23,7 +23,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('student.classroom');
+        return view('user.classroom');
     }
 
 }
