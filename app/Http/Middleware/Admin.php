@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Support\Facades\Auth;
 use Closure;
 
 class Admin
@@ -17,7 +18,7 @@ class Admin
     {
         // $name =  auth()->user()->name; 
 
-        if (auth()->user()->id == 1) {
+        if (Auth::user()->id == 1) {
            return $next($request);
         }
         else{

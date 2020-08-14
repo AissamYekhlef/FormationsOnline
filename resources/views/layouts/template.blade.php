@@ -74,8 +74,11 @@
                                 </li>
                             @endif
                         @else
+                          @if(Auth::user()->id == 1)
                              <a class="nav-link text-primary" href="/admin/">  Dashboard     </a>  
+                          @else   
                              <a class="nav-link " href="{{ Auth::user()->courses_enrolled }}">My Courses </a>
+                          @endif   
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

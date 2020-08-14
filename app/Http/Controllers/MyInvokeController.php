@@ -14,6 +14,13 @@ class MyInvokeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        echo "Hello from the invoke method in the Controller";
+        // echo "Hello from the invoke method in the Controller";
+        
+        // if ($request->coupon = 20) {
+        //     abort(403, "Your age must be greater than 20 .!!");
+        // }else{  }
+            return view('layouts.template');
+      
+       
     }
 }

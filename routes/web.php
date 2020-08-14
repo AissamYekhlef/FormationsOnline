@@ -34,9 +34,11 @@ Route::prefix('courses')->name('courses.')->group(function(){
 
 
 //Admin Routes
-Route::prefix('admin')->name('admin.')->group(function(){
+Route::prefix('admin')->name('admin.')->middleware('admin')->group(function(){
     Route::get('/', 'AdminController@index')->name('admin');
-    Route::get('/users', 'AdminController@getUsers')->name('users');
+    // Route::get('/users', 'AdminController@getUsers')->name('users');
+    Route::resource('/users', 'UserController');
+
     Route::get('/students', 'AdminController@getStudents')->name('students');   
 });
 
