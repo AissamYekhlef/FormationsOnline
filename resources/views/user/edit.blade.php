@@ -18,8 +18,17 @@
       <!-- Main content -->
       <section class="content">
         <p>
-          You can Update  the user inforormations :<span class="text-primary">{{$user->name}}</span>
+          You can Update the user informations :<span class="text-primary">{{$user->email}}</span>
         </p>
+        <p>Change the profile photo:</p>
+        <div class="cart-body">
+          <form action="/upload" method="post" enctype="multipart/form-data">
+              @csrf
+              <input type="file" name="image" placeholder="image" id="" required>
+              <input type="submit" vlaue="Upload" id="">
+          </form>
+        </div>
+
       </section>
       <!-- /.content -->
 @endsection

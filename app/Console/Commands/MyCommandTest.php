@@ -11,14 +11,22 @@ class MyCommandTest extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'iss';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'iss is my test command';
+
+    
+    /**
+     * The console command help text.
+     *
+     * @var string|null
+     */
+    protected $help = "This is a Text Helper";
 
     /**
      * Create a new command instance.

@@ -77,11 +77,17 @@
                           @if(Auth::user()->id == 1)
                              <a class="nav-link text-primary" href="/admin/">  Dashboard     </a>  
                           @else   
-                             <a class="nav-link " href="{{ Auth::user()->courses_enrolled }}">My Courses </a>
+                             <a class="nav-link text-primary" href="/classroom">Classroom </a>
                           @endif   
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
+                                    @if(Auth::user()->avatar)
+                                    <img src="{{ asset('storage/images/'.Auth::user()->avatar) }}" alt="avatar" class="rounded-circle" width="30" height="30"/>
+                                    @else
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}" alt="avatar" class="rounded-circle" width="30" height="30"/>
+                                    @endif
+                                    <span class="caret"></span>
                                 </a>
                                 
 

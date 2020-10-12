@@ -22,7 +22,8 @@ class Admin
            return $next($request);
         }
         else{
-            abort(401);
+           return $next($request);
+        //    abort(401); // retrun Unautoorized when the user_id != 1.
         }
 
         

@@ -20,6 +20,15 @@ class UserTableSeeder extends Seeder
                 'email'          => 'admin@admin.com',
                 'password'       => '$2y$10$xrsPLYaYoSrvak108tqKouwl9I/3VZMJ5h/I96pOCqwg.c0Dl4ILy',//password
                 'remember_token' => null,
+                'created_at' => now(),          
+            ],
+            [
+                'id'             => 2,
+                'name'           => 'Guest',
+                'email'          => 'guest@guest.com',
+                'password'       => '$2y$10$xrsPLYaYoSrvak108tqKouwl9I/3VZMJ5h/I96pOCqwg.c0Dl4ILy',//password
+                'remember_token' => null,
+                'created_at' => now(),   
             ],
         ];
 

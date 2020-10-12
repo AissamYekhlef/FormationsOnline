@@ -40,7 +40,11 @@
                     <td> {{ $user->id }} </td>
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->email }} </td>
-                    <td> <a href="users/{{$user->id}}/edit" class="btn btn-info"> Edit</a> <a href="#" class="btn btn-danger">Delete </a> </td>
+                    <td> 
+                      <a href="users/{{$user->id}}" class="btn btn-success"> Details</a>
+                      <a href="users/{{$user->id}}/edit" class="btn btn-info"> Edit</a> 
+                      <a href="#" class="btn btn-danger">Delete </a> 
+                    </td>
                 </tr>
               @endforeach
           </table>
