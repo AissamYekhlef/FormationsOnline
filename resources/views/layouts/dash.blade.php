@@ -174,7 +174,7 @@
           @endif
         </div>
         <div class="info">
-          <a href="/profile" class="d-block"> {{ Auth::user()->name }}</a>
+          <a href="#profile" class="d-block"> {{ Auth::user()->name }}</a>
         </div>
         <div class="info">
           <a src={{ Auth::user()->email }} class="img-circle elevation-2" >
