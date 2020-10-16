@@ -20,12 +20,34 @@
         <p>
           You can Update the user informations :<span class="text-primary">{{$user->email}}</span>
         </p>
-        <p>Change the profile photo:</p>
-        <div class="cart-body">
-          <form action="/upload" method="post" enctype="multipart/form-data">
+        <p>Change the profile Informations:</p>
+        <div class="cart-body ml-5">
+          <form action="/admin/users/{{$user->id}}/edit" method="post" enctype="multipart/form-data">
               @csrf
-              <input type="file" name="image" placeholder="image" id="" required>
-              <input type="submit" vlaue="Upload" id="">
+              @method('put')
+              <div class="row col-md-10 mb-1">
+              <label class="col-md-2" for="">Name:</label>
+              <input type="text" name="name" placeholder="Name" id="" class="float-left" required>
+              </div>
+              <div class="row col-md-10 mb-1">
+                <label class="col-md-2" >Email</label>
+                <input type="email" name="email" placeholder="Email" id="" autocomplete="off" required>
+              </div>
+              <div class="row col-md-10 mb-1">
+                <label class="col-md-2" for="">Old Password:</label>
+                <input type="password" name="old_password" placeholder="Old Password" id="" autocomplete="off" required>
+              </div>
+              <div class="row col-md-10 mb-1">
+                <label class="col-md-2" for="">New Password:</label>
+                <input type="password" name="password" placeholder="New Password" id="" autocomplete="off" required>
+              </div>
+              <div class="row col-md-10 mb-1">
+                <label class="col-md-2" for="">Avatar:</label>
+                <input type="file" name="image" placeholder="image" id="" >
+              </div>              
+              
+              <input type="submit" class="btn btn-success" vlaue="Upload" id="">
+              
           </form>
         </div>
 

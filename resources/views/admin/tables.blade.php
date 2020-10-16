@@ -41,9 +41,9 @@
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->email }} </td>
                     <td> 
-                      <a href="users/{{$user->id}}" class="btn btn-success"> Details</a>
-                      <a href="users/{{$user->id}}/edit" class="btn btn-info"> Edit</a> 
-                      <a href="#" class="btn btn-danger">Delete </a> 
+                      <a href="/admin/users/{{$user->id}}" class="btn btn-success"> Details</a>
+                      <a href="/admin/users/{{$user->id}}/edit" class="btn btn-info"> Edit</a> 
+                      <a href="/admin/users/{{$user->id}}/delete" class="btn btn-danger">Delete </a> 
                     </td>
                 </tr>
               @endforeach

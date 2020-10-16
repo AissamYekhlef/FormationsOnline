@@ -82,6 +82,8 @@ class UserController extends Controller
         // return $user;
     }
 
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -91,7 +93,18 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        // the rest of updating code
+        // $u = User::get($user);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if ($user->password == password_hash($request->old_password, PASSWORD_DEFAULT)) {
+            $user->password = password_hash($request->password, PASSWORD_DEFAULT);
+        }
+        $user->avatar = $user->uploadAvatarUser($request);
+        $user->save();
+
+        return view('user.show')->with('user',$user);
+        // return redirect('admin/users')->with('users', User::all());
     }
 
     /**
@@ -102,7 +115,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect('admin/users')->with('users', User::all());
     }
 
     public function uploadAvatar(Request $request){

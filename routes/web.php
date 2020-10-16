@@ -25,7 +25,8 @@ Route::get('/testresource','HomeController@testresource');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::redirect('/home', '/admin');
 
 // Courses Routes
 
@@ -43,7 +44,8 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function(){
     Route::get('/', 'AdminController@index')->name('admin');
     // Route::get('/users', 'AdminController@getUsers')->name('users');
     Route::resource('/users', 'UserController');
-    // Route::get('/users/{user}', 'UserController@show');
+    Route::put('/users/{user}/edit', 'UserController@update');
+    Route::get('/users/{user}/delete', 'UserController@destroy');
     Route::resource('/courses','CourseController');
     Route::get('/students', 'AdminController@getStudents')->name('students');   
 });
