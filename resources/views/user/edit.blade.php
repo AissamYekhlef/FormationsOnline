@@ -27,11 +27,11 @@
               @method('put')
               <div class="row col-md-10 mb-1">
               <label class="col-md-2" for="">Name:</label>
-              <input type="text" name="name" placeholder="Name" id="" class="float-left" required>
+              <input type="text" name="name"  @if($user->name) value="{{ $user->name }}" @else placeholder="Name" @endif id="" class="float-left" required>
               </div>
               <div class="row col-md-10 mb-1">
                 <label class="col-md-2" >Email</label>
-                <input type="email" name="email" placeholder="Email" id="" autocomplete="off" required>
+                <input type="email" name="email"  @if($user->email) value="{{ $user->email }}" @else placeholder="Email" @endif id="" autocomplete="off" required>
               </div>
               <div class="row col-md-10 mb-1">
                 <label class="col-md-2" for="">Old Password:</label>
@@ -40,6 +40,10 @@
               <div class="row col-md-10 mb-1">
                 <label class="col-md-2" for="">New Password:</label>
                 <input type="password" name="password" placeholder="New Password" id="" autocomplete="off" required>
+              </div>
+              <div class="row col-md-10 mb-1">
+                <label class="col-md-2" for="">Confirm Password:</label>
+                <input type="password" name="conf_password" placeholder="Confirm Password" id="" autocomplete="off" required>
               </div>
               <div class="row col-md-10 mb-1">
                 <label class="col-md-2" for="">Avatar:</label>
